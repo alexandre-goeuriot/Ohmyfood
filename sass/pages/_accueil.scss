@@ -171,21 +171,25 @@
                 font-weight: bold;
                 position: relative;
                 left: 70%;
-                bottom: 250px;
+                bottom: 200px;
                 @media screen and (max-width: map-get($media, Laptop)) {
                     left: 55%;
-                    bottom: 180px;
+                    bottom: 160px;
                 }
                 @media screen and (max-width: map-get($media, Tablet)) {
                     left: 70%;
-                    bottom: 260px;
+                    bottom: 220px;
                     width: 100px;
                     height: 40px;
                     font-size: 20px;
                 }
                 @media screen and (max-width: map-get($media, MobileM)) {
                     left: 60%;
-                    bottom: 220px;
+                    bottom: 200px;
+                }
+                @media screen and (max-width: map-get($media, MobileS)) {
+                    left: 60%;
+                    bottom: 190px;
                 }
 }
             }
