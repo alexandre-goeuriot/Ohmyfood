@@ -1,0 +1,17 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$backgroundColor-primary: #f6f6f7;
+$backgroundColor-secondary: #eaeaea;
+$backgroundColor-tertiary: #353535;
+$gradient-color : linear-gradient($color-secondary, $color-primary);
+
+$media: (
+MobileS : 320px,
+MobileM : 375px,
+MobileL: 425px,
+Tablet: 768px,
+Laptop: 1024px,
+LaptopL :1440px,
+4k: 2560px,
+)

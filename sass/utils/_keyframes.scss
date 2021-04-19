@@ -1,0 +1,65 @@
+@keyframes load-off {
+  90%{
+
+    left: 0px;
+}
+100% {
+    left: -10000px;
+}
+
+}
+@keyframes loading {
+    0%{
+      transform: rotate(0deg) scale(1);
+      border-top-color:$color-tertiary;
+      border-bottom-color:$color-tertiary;
+
+    }
+    
+    50% {
+      transform: rotate(360deg) scale(3);
+      border-top-color: $color-primary;
+      border-bottom-color: $color-primary;
+    }
+    
+    100%{
+      transform: rotate(720deg) scale(1);
+      border-top-color: $color-tertiary;
+      border-bottom-color:$color-tertiary;
+    }
+    
+  }
+
+  
+
+  
+
+  @keyframes deplacement{ 
+    from{ 
+    opacity: 0; transform: translateX(0px); 
+  } 
+    to{ opacity: 1; transform: translateX(0px); 
+    }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+}

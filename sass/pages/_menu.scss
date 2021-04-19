@@ -1,0 +1,161 @@
+
+img{
+    width: 100%;
+
+}
+
+.img{
+
+    &__bg{
+        @media screen and (max-width: map-get($media, MobileL)) {
+            display: none;
+        }
+    }
+    &__small{
+        @media screen and (min-width: map-get($media, Tablet)) {
+            display: none;
+        }
+    }
+}
+
+.menu {
+    background-color: $backgroundColor-primary;
+    @include flex-center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px 30px 0 0;
+    transform: translateY(-30px);
+    
+    &__container {
+        width: 400px;
+        padding: 20px;
+        margin-bottom: 10px;
+        @include flex-center;
+        justify-content: center;
+        flex-direction: column;   
+        @media screen and (max-width: map-get($media, MobileM)) {
+        width: 100%;
+            }
+        @media screen and (max-width: map-get($media, MobileL)) {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            padding: 0px;
+        }
+        &__header {
+            @include flex-center;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 20px;
+            margin-bottom: 30px;
+
+            &__title { 
+                font-family: 'Shrikhand', sans-serif;
+            }
+            @media screen and (max-width: map-get($media, MobileL)) {
+                font-size: 15px;
+            }
+            @media screen and (max-width: map-get($media, MobileM)) {
+                width: 90%;
+                margin-bottom: 10px;
+            }
+            &--heart {
+                @include heart
+            }
+        }    
+        & h2 {
+            font-weight: lighter;
+            margin-bottom: 20px;
+            @media screen and (max-width: map-get($media, MobileL)) {
+                margin-bottom: 30px;
+            }
+            &::after {
+                content: "";
+                width: 40px;
+                height: 3px;
+                background-color: $color-tertiary;
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    }
+
+        .card{
+            width: 400px;
+            margin-bottom: 15px;
+            border-radius: 1.25rem;
+            box-shadow: 0 0 16px #0000002e;
+            display: flex;
+            cursor: pointer;
+            animation: load;
+            opacity: 0;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            @media screen and (max-width: map-get($media, MobileL)) {
+                margin-bottom: 30px;
+            }
+            @media screen and (max-width: map-get($media, MobileM)) {
+                width: 300px;
+            }
+            &:hover .card__check{
+                width: 60px;
+                animation: deplacement ease-in-out 400ms;
+            }
+            &:hover .fas {
+                animation-name: rotate-center;
+                animation-duration: 400ms;
+            }
+            &--2 {
+                animation-delay: 100ms;
+            }
+            &--3 {
+                animation-delay: 200ms;
+            }
+            &__text {
+                width: 100%;
+                padding: 25px;
+                &__container {
+                    margin-top: 10px;
+                    font-weight: lighter;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &__description {
+                        text-overflow: ellipsis;
+                        width: 100px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        flex-grow: 1;
+
+                    }
+                }
+            }
+        &__check {
+            width: 0px;
+            background-color: #99e2d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+            transition: 400ms;
+            border-radius: 0 15px 15px 0;
+        }   
+        }
+    }
+
+     
+    .commander {
+        
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &__button {
+            @include button;
+        }
+    }
+
+
+
+

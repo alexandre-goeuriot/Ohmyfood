@@ -1,0 +1,195 @@
+.localisation {
+    @include flex-center;
+    justify-content: center;
+    height: 50px;
+    background-color: $backgroundColor-secondary;
+    color: black;
+    &__text {
+        margin-left: 10px;
+    }
+}
+
+.reservation {
+    @include flex-center;
+    flex-direction: column;
+    height: 160px;
+    background-color: $backgroundColor-primary;
+    text-align: center;
+    padding: 40px 0;
+    @media screen and (max-width: map-get($media, MobileM)) {
+        height: 200px;    
+    }
+    @media screen and (max-width: map-get($media, MobileS)) {
+        height: 230px;    
+    }
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+            font-weight: lighter;
+            font-size: 20px;
+            color: $backgroundColor-tertiary;
+            margin-bottom: 30px;
+        }
+    &__btn {
+        @include button;
+        
+    }
+}
+
+.fonctionnement{
+    height: 100&;
+    &__title {
+        padding: 30px;
+    }
+    &__list {
+        @include flex-center;
+        justify-content: space-around;
+        flex-direction: row;
+        @media screen and (max-width: map-get($media, Tablet)) {
+            flex-direction: column;
+        }
+    }
+    &__card {
+        @include flex-center;
+        background-color: $backgroundColor-primary;
+        height: 60px;
+        width: 25%;
+        border-radius: 20px;
+        box-shadow: 1px 3px 10px rgb(0 0 0 / 20%);
+        margin-bottom: 35px;
+        &--3 {
+            background-color: #f5edff;
+        }
+        @media screen and (max-width: map-get($media, Tablet)) {
+            width: 50%;
+        }
+        @media screen and (max-width: map-get($media, MobileL)) {
+            width: 85%;
+            margin-bottom: 25px;
+        }
+        &__number{
+            @include flex-center;
+            justify-content: center;
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+            background-color: $color-primary;
+            color: #fff;
+            margin-right: 10px;
+            transform: translateX(-15px);
+        }
+        &__icon{
+            margin-right: 10px;
+            color: #7e7e7e;
+            &--color{
+                margin-right: 10px;
+                color: $color-primary;   
+            }
+        }
+    }
+}
+
+.restaurant {
+    height: 450px;
+    background-color: $backgroundColor-primary;
+    @media screen and (max-width: map-get($media, Laptop)) {
+        height: 350px;
+    }
+    @media screen and (max-width: map-get($media, Tablet)) {
+        height: 1440px;
+        
+    }
+    @media screen and (max-width: map-get($media, MobileM)) {
+        height: 1300px;
+    }
+    @media screen and (max-width: map-get($media, MobileS)) {
+        height: 1200px;
+    }
+    &__title {
+        padding: 30px;
+    }
+    &__list {
+        @include flex-center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        @media screen and (max-width: map-get($media, Tablet)) {
+            flex-direction: column;
+        }
+        &__card {
+            border-radius: 1.25rem;
+            box-shadow: 0 0 16px #0000002e;
+            color: black;
+            background-color: #fff;
+            height: 270px;
+            &--card2{
+                height: 300px;
+            }
+            @media screen and (max-width: map-get($media, Laptop)) {
+                width: 20%;
+                height: 210px;
+            }
+            @media screen and (max-width: map-get($media, Tablet)) {
+                width: 50%;
+                margin-bottom: 25px;
+                height: 310px;
+            }
+            @media screen and (max-width: map-get($media, MobileL)) {
+                width: 85%;
+            }
+            @media screen and (max-width: map-get($media, MobileM)) {
+                height: 270px;
+            }
+            
+            @media screen and (max-width: map-get($media, MobileS)) {
+                height: 240px;
+            }
+            &__img {
+                border-radius: 10px 10px 0 0;
+            }
+            &__txt{
+                padding: 0px 20px 0px 20px;
+
+            }
+            
+            &--heart {
+                @include heart
+            }
+            &__subtitle{
+                font-weight: lighter;
+            }
+            &__new{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+                background-color: #aadfd2;
+                color: #40886b;
+                width: 80px;
+                height: 30px;
+                font-size: 15px;
+                font-weight: bold;
+                position: relative;
+                left: 70%;
+                bottom: 250px;
+                @media screen and (max-width: map-get($media, Laptop)) {
+                    left: 55%;
+                    bottom: 180px;
+                }
+                @media screen and (max-width: map-get($media, Tablet)) {
+                    left: 70%;
+                    bottom: 260px;
+                    width: 100px;
+                    height: 40px;
+                    font-size: 20px;
+                }
+                @media screen and (max-width: map-get($media, MobileM)) {
+                    left: 60%;
+                    bottom: 220px;
+                }
+}
+            }
+        }
+    }
+
+

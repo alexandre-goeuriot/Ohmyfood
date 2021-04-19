@@ -1,0 +1,55 @@
+.loading {
+@include flex-center;
+justify-content: center;
+background-color: #fff;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 1240px;
+z-index: 1;
+opacity: 0.9;
+animation: load-off 4s 400ms;
+animation-fill-mode: both;
+@media screen and (max-width: map-get($media, Laptop)) {
+    height: 1140px;
+}
+@media screen and (max-width: map-get($media, Tablet)) {
+    height: 2230px;
+}
+@media screen and (max-width: map-get($media, MobileL)) {
+opacity: 0;
+}
+
+
+.loader {
+
+    border: 10px solid #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    animation: loading 4s linear 400ms;
+    position: relative;
+    @include flex-center;
+    justify-content: center;
+    color: $color-primary;
+    animation-delay: 500ms;
+    @media screen and (max-width: map-get($media, Tablet)) {
+    animation: none;        
+}
+    
+
+
+
+}
+    
+    
+
+
+
+
+}
+
+
+
+

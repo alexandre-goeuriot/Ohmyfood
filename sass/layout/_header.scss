@@ -1,0 +1,41 @@
+header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 100%;
+            background-color: #fff;
+        }
+         
+.arrow{
+    position: relative;
+    right: 35%;
+    font-size: 20px;
+    i{
+        color:black;
+    }
+    @media screen and (max-width: map-get($media, Laptop)) {
+        right: 28%;
+    }
+    @media screen and (max-width: map-get($media, MobileL)) {
+        right: 20%;
+    }
+    @media screen and (max-width: map-get($media, MobileM)) {
+        right: 15%;
+    }
+
+}
+
+
+
+.logo {
+    width: 300px;
+    @media screen and (max-width: map-get($media, MobileL)) {
+        width: 200px;
+    }
+    
+
+}
+
+
+
